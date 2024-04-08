@@ -1,0 +1,45 @@
+﻿@model Consultation
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Реєстрація пройшла успішно!</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 50px auto;
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        h3 {
+            margin-bottom: 20px;
+            color: #007bff;
+        }
+
+        p {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h3>Реєстрація успішна!</h3>
+        <p>Ім'я: @Model.Name</p>
+        <p>Пошта: @Model.Email</p>
+        <p>Дата: @Model.Date.ToShortDateString()</p>
+        <p>Предмет: @Model.Subject</p>
+    </div>
+</body>
+</html>
